@@ -1,0 +1,118 @@
+/*ESTILO GENERAL*/
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffeef8; /* Rosado pastel suave */
+    color: #444;
+}
+
+/*ENCABEZADO*/
+header {
+    background-color: #ffb6d9; /* Rosado pastel fuerte */
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 150, 200, 0.4);
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/*MENÚ*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff8dc8;
+    box-shadow: 0 4px 10px rgba(255, 100, 160, 0.4);
+}
+
+/*SECCIONES*/
+section {
+    background-color: white;
+    margin: 30px auto;
+    width: 80%;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(150, 80, 120, 0.2);
+}
+
+section h2 {
+    font-size: 28px;
+    color: #d9468f;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section p, section li {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/*LINKS*/
+a {
+    color: #d63384;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ff1f8f;
+    text-shadow: 0 0 5px rgba(255, 80, 150, 0.5);
+}
+
+/*IMÁGENES*/
+img {
+    display: block;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(180, 80, 120, 0.3);
+}
+
+/*FORMULARIO*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 70%;
+    margin: auto;
+}
+
+form input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ffb6d9;
+    font-size: 18px;
+}
+
+form button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ff7abf;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0
+}
