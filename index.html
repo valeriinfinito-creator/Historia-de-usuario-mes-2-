@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <header>
         <h1>Valeria Ibarra</h1>
         <nav>
@@ -22,39 +23,82 @@
             </ul>
         </nav>
     </header>
+
     <hr>
+
     <section>
         <h2>ABOUT ME</h2>
-        <h4>
-            <p>My name is valeria,i'm 18 years old,i am from colombia and
-                i live in medellin with my family and my pets and i am studying
-                software programming and english. </p>
-        </h4>
+        <p>
+            My name is Valeria, I'm 18 years old, I am from Colombia and
+            I live in Medellín with my family and my pets.
+            I am studying software programming and English.
+        </p>
         <hr>
     </section>
+
     <section>
         <h2>PROJECTS</h2>
-        <P>These are my repositories</P>
+        <p>These are my repositories</p>
         <ul>
-            <li><a href="https://github.com/valeriinfinito-creator">link to my github</a></li>
+            <li>
+                <a href="https://github.com/valeriinfinito-creator" target="_blank">
+                    Link to my GitHub
+                </a>
+            </li>
         </ul>
         <hr>
     </section>
+
+    <!--JAVASCRIPT-->
+    <section>
+        <h2>INTERACTIVITY</h2>
+
+        <p id="texto">
+            This text will change when you click the button.
+        </p>
+
+        <button onclick="cambiarTexto()">
+            Change text
+        </button>
+
+        <br><br>
+
+        <button onclick="mostrarOcultar()">
+            Show / Hide content
+        </button>
+
+        <div id="contenido">
+            <p>This content can be hidden with JavaScript.</p>
+        </div>
+    </section>
+
     <section>
         <h2>CONTACTS</h2>
         <form>
             <label for="name">Name:</label>
-            <input type="name" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="Name">
+
             <br>
-            <label for="last name">Last name:</label>
-            <input type="last name" name="last name" placeholder="Last name">
+
+            <label for="lastname">Last name:</label>
+            <input type="text" name="lastname" placeholder="Last name">
+
             <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email"> 
-            <button>Send</button>
-            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email">
+
+            <br><br>
+
+            <button type="submit">Send</button>
+
+            <br><br>
+
             <a href="mascotas.html">Go to mascotas.html</a>
         </form>
     </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

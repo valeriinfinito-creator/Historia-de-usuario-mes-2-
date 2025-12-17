@@ -1,118 +1,171 @@
-/*ESTILO GENERAL*/
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffeef8; /* Rosado pastel suave */
-    color: #444;
+:root {
+    --color-principal: #ffb6d9;
+    --color-secundario: #ffeef8;
+    --color-hover: #ff8dc8;
+    --texto: #444;
+    --blanco: #ffffff;
+    --fuente: 'Poppins', Arial, sans-serif;
 }
 
-/*ENCABEZADO*/
+body {
+    font-family: var(--fuente);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secundario);
+    color: var(--texto);
+    font-size: 1rem;
+}
+
 header {
-    background-color: #ffb6d9; /* Rosado pastel fuerte */
-    color: #fff;
-    padding: 25px;
-    text-align: center;
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     box-shadow: 0 4px 10px rgba(255, 150, 200, 0.4);
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 2.2rem;
     margin: 0;
-    letter-spacing: 2px;
 }
 
-/*MENÚ*/
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 12px;
+    margin-top: 1rem;
+
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    gap: 1.5rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 20px;
-    padding: 8px 15px;
+    color: var(--blanco);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #ff8dc8;
-    box-shadow: 0 4px 10px rgba(255, 100, 160, 0.4);
+    background-color: var(--color-hover);
 }
 
-/*SECCIONES*/
 section {
-    background-color: white;
-    margin: 30px auto;
+    background-color: var(--blanco);
+    margin: 2rem auto;
     width: 80%;
-    padding: 25px;
+    padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(150, 80, 120, 0.2);
 }
 
 section h2 {
-    font-size: 28px;
-    color: #d9468f;
     text-align: center;
-    margin-bottom: 15px;
+    color: #d9468f;
+    font-size: 1.8rem;
 }
 
-section p, section li {
-    font-size: 20px;
+section p,
+section li {
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-/*LINKS*/
-a {
-    color: #d63384;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: #ff1f8f;
-    text-shadow: 0 0 5px rgba(255, 80, 150, 0.5);
-}
-
-/*IMÁGENES*/
 img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 20px auto;
-    width: 350px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(180, 80, 120, 0.3);
+    margin: 1rem auto;
+    border-radius: 15px;
 }
 
-/*FORMULARIO*/
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
     width: 70%;
     margin: auto;
 }
 
-form input {
-    padding: 12px;
+form input,
+form textarea {
+    padding: 0.7rem;
     border-radius: 10px;
-    border: 2px solid #ffb6d9;
-    font-size: 18px;
+    border: 2px solid var(--color-principal);
+    font-size: 1rem;
 }
 
 form button {
-    padding: 12px;
-    font-size: 18px;
-    background-color: #ff7abf;
-    color: white;
+    padding: 0.8rem;
+    background-color: var(--color-hover);
+    color: var(--blanco);
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background-color: #ffe0f0;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-principal);
+    color: var(--blanco);
+}
+
+/*MEDIA QUERIES*/
+
+/*MÓVILES*/
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
+/*TABLETS */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .grid-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
